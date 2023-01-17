@@ -1,6 +1,34 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+
+// Palindrome Attempt One
+
+// function reverseString(word){
+//   const wordArray =word.split("");
+//   const reversedWordArray = wordArray.reverse();
+//   const reversedWord = reversedWordArray.join('');
+//   return reversedWord;
+// }
+
+// function isPalindrome(word) {
+//   const reversedWord = reverseString(word);
+//   if (word === reversedWord) {
+//     return true;
+//   }else{
+//     return false;
+//   }
+// }
+
+// Palindrome Attempt One but Refactored//
+function reverseString(str){
+  const reversedWord = str.split('').reverse().join('');
+  return reversedWord;
 }
+function isPalindrome(str){
+  const reversedWord = reverseString(str);
+  if(str === reversedWord) {
+    return true;
+  }else return false;
+}
+
 
 /* 
   Add your pseudocode here
